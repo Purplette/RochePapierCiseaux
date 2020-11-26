@@ -1,0 +1,193 @@
+
+/**********/
+/*GENERALE*/
+/**********/
+body{
+    margin:0;
+    display:flex;
+    height:100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    padding:5px;
+    margin:0;
+}
+
+img{
+    height:90px;
+}
+
+.boite{
+    border:#432FCF 1px solid;
+    border-radius:5px;
+}
+
+#filtre{
+    display:none;
+    position: absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100vw;
+    background-color:rgba(69, 44, 212, 0.596);
+}
+
+/******/
+/*MAIN*/
+/******/
+
+main{
+    margin:auto;
+    width:500px;
+    border:#45EAFF solid 2px;
+    border-radius:5px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .1);
+   
+}
+
+h1{
+    text-align:center;
+    margin:0px;
+    padding:10px; 
+    margin-bottom:10px;
+    background-color:#45EAFF;
+    color:white;
+}
+
+.jeux{
+    padding:10px;
+    display:grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-gap:10px;
+    grid-template-areas:
+    "score ordi bouton"
+    "choix choix none";
+}
+
+/**********************/
+/*AFFICHAGE DES SCORES*/
+/**********************/
+.score{
+    grid-area:score;
+}
+.score>div{
+    margin-bottom:10px;
+}
+
+p:first-child{
+    background-color: #432FCF;
+    color:white;
+    text-align:center;
+    font-weight:500;
+}
+
+.score>div>p:nth-child(2){
+    text-align:center;
+    font-weight:bold;
+    font-size:18pt;
+    color:#45EAFF;
+}
+
+/******************************/
+/*AFFICHAGE REPONSE ORDINATEUR*/
+/******************************/
+.boitereponseordi{
+    grid-area:ordi;
+}
+
+#reponseordi{
+    border:#45EAFF 2px solid;
+    height:200px;
+    display:flex;
+}
+
+#textereponse{
+    background-color: #45EAFF;
+    color:white;
+    font-weight:bold;
+}
+#reponseordi>img{
+    height:150px;
+    margin:auto;
+}
+
+/*****************/
+/*BOUTONS ACTIONS*/
+/*****************/
+.boutons{
+    grid-area:bouton;
+}
+
+button{
+    background-color:#432FCF;
+    color:white;
+    width:100px;
+    padding:7px;
+    margin-bottom:10px;
+    border-radius:5px;
+    border:none;
+}
+
+/***************/
+/*CHOIX DU USER*/
+/***************/
+.fairechoix{
+    grid-area:choix;
+}
+
+#choixmain{
+    display:flex;
+    justify-content: center;
+}
+#choixmain>img{
+    margin:10px;
+    border:rgba(0, 0, 255, .1) 2px solid;
+    border-radius:5px;
+}
+
+/*******************/
+/*POPUP CHANGER NOM*/
+/*******************/
+#popup{
+    display:none;
+    flex-direction: column;
+    align-items: center;
+    border-radius:5px;
+    width:300px;
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition:1s;
+    background-color: white;
+}
+
+h4{
+    text-align:center;
+    width:100%;
+    margin:0px;
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color:#432FCF;
+    border-radius:5px 5px 0px 0px;
+    color:white;
+}
+
+input[type=text]{
+    padding:10px;
+    margin:20px;
+    margin-bottom:0;
+    border:lightgray solid 2px;
+}
+
+#popup>button{
+    background-color: #45EAFF;
+    border:none;
+    margin:0;
+    padding:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-bottom:10px;
+    font-size:11pt;
+}

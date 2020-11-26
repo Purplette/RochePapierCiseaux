@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Roche, papier, ciseaux!</title>
+    <link rel="stylesheet" type="text/css" href="rpc.css" />
+</head>
+
+<body>
+    <div id="filtre"></div>
+
+    <main>
+        <h1>Roche, papier, ciseaux!</h1>
+        <div class="jeux">
+
+            <!-- AFFICHAGE DES SCORES -->
+            <div class="score">
+                <div class="boite">
+                    <p>Ordinateur</p>
+                    <p id="scoreordi">0</p>
+                </div>
+                <div class="boite">
+                    <p id="nom">Inconnu</p>
+                    <p id="scoreuser">0</p>
+                </div>
+            </div>
+
+            <!-- AFFICHAGE REPONSE ORDINATEUR -->
+            <div class="boitereponseordi">
+                <div id="reponseordi"></div>
+                <p id="textereponse"><i>En attente de votre choix</i></p>
+                <input id="checkbox" type="checkbox" />
+                <label for="checkbox">Mode Triche</label>
+            </div>
+
+            <!-- BOUTONS ACTIONS -->
+            <div class="boutons">
+                <button id="raz">RAZ</button>
+                <button id="changernom">Changer nom</button>
+            </div>
+
+            <!-- CHOIX DU USER -->
+            <div class="fairechoix boite">
+                <p>Faites votre choix</p>
+                <div id="choixmain">
+                    <img alt="roche" id="rock" src="rock.jpg" />
+                    <img alt="papier" id="paper" src="paper.jpg" />
+                    <img alt="ciseaux" id="scissors" src="scissors.jpg" />
+                </div>
+            </div>
+        </div>
+
+        <!-- POPUP CHANGER NOM -->
+        <div id="popup">
+            <h4>Changer votre nom</h4>
+            <input id="nouveaunom" type="text" placeholder="Votre nom ici" /><br>
+            <button id="valider">Valider</button>
+        </div>
+
+    </main>
+
+    <script src="rpc.js"></script>
+</body>
+
+</html>
